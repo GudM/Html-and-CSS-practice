@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+   <h1 id="title">Survey Form</h1>
+   
+   <!-- Creat field of main  content -->
+   
+   <div class="wrapper">
+       <p id="description">Let us know how we can improve freeCodeCamp</p>
+       
+       <!-- Creat a Form -->
+       
+       <form action="" id="survey-form">
+          
+          <!-- NAME, EMAIL and AGE inputs -->
+           
+            <div class="row-tab">
+               <div class="labels">
+                   <label for="" id="name-label">* Name:</label>
+               </div>
+               <div class="right-tab">
+                   <input type="text" name="name" id="name" class="input-field" placeholder="Enter your name" required>
+               </div>
+           </div>
+           
+           <div class="row-tab">
+               <div class="labels">
+                   <label for="" id="email-label">* Email:</label>
+               </div>
+               <div class="right-tab">
+                   <input type="text" name="email" id="email" class="input-field" placeholder="Enter your email" required>
+               </div>
+           </div>
+           
+           <div class="row-tab">
+               <div class="labels">
+                   <label for="" id="number-label">* Age:</label>
+               </div>
+               <div class="right-tab">
+                   <input type="number" name="age" id="number" class="input-field" placeholder="Age" min="0" max="100">
+               </div>
+           </div>
+           
+           <!-- Dropdown list -->
+           
+           <div class="row-tab">
+               <div class="labels">
+                   <label for="">Which option best describes your current role?</label>
+               </div>
+               <div class="right-tab">
+                   <select name="" id="dropdown">
+                      <option value="select-option" disabled selected>Select an option</option>
+                       <option value="student">Student</option>
+                       <option value="full-time-job">Full Time Job</option>
+                       <option value="full-time-leaner">Full time Learner</option>
+                       <option value="not-to-say">Prefer not to say</option>
+                       <option value="Other">Other</option>
+                   </select>
+               </div>
+           </div>
+           
+           <!-- Radio buttons to choose -->
+           
+           <div class="row-tab">
+               <div class="labels">
+                   <label for="">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+               </div>
+               <div class="right-tab">
+                 <ul style="list-style: none;">
+                     <li><input type="checkbox" name="rec" value="1"> Definitely</li>
+                     <li><input type="checkbox" name="rec" value="2"> Maybe</li>
+                     <li><input type="checkbox" name="rec" value="3"> Not sure</li>
+                 </ul>
+               </div>
+           </div>
+           
+           <!-- Another dropdown menu -->
+           
+           <div class="row-tab">
+               <div class="labels">
+                   <label for="">What do you like most in FCC:</label>
+               </div>
+               <div class="right-tab">
+                   <select name="" id="dropdown">
+                      <option value="select-option" disabled selected>Select an option</option>
+                       <option value="challenges">Challenges</option>
+                       <option value="projects">Projects</option>
+                       <option value="community">Community</option>
+                       <option value="open-source">Open Source</option>
+                   </select>
+               </div>
+           </div>
+           
+           <!-- Lots of checkboxes  -->
+           
+           <div class="row-tab">
+               <div class="labels">
+                   <label for="">Things that should be improved in the future (Check all that apply):</label>
+               </div>
+               <div class="right-tab">
+                 <ul style="list-style: none;">
+                     <li><input type="checkbox" value="1"> Front-end Projects
+                     </li>
+                     <li><input type="checkbox" value="1"> Back-end Projects
+                     </li>
+                     <li><input type="checkbox" value="1"> Data Visualization
+                     </li>
+                     <li><input type="checkbox" value="1"> Challenges
+                     </li>
+                     <li><input type="checkbox" value="1"> Open Source Community
+                     </li>
+                     <li><input type="checkbox" value="1"> Gitter help rooms
+                     </li>
+                     <li><input type="checkbox" value="1"> Videos
+                     </li>
+                     <li><input type="checkbox" value="1"> City Meetups
+                     </li>
+                     <li><input type="checkbox" value="1"> Wiki
+                     </li>
+                     <li><input type="checkbox" value="1"> Forum
+                     </li>
+                     <li><input type="checkbox" value="1"> Additional Courses
+                     </li>
+                 </ul>
+               </div>
+           </div>
+           
+    <!-- Creat a text field for suggestions -->
+          
+          <div class="row-tab">
+               <div class="labels">
+                   <label for="">Any Comments or Suggestions?</label>
+               </div>
+               <div class="right-tab">
+                 <textarea name="text" id="" cols="30" rows="5" placeholder="Enter your comment here...">
+                 </textarea>
+               </div>
+           </div>
+           
+    <!-- Submit button -->
+          
+          <button id="submit">Submit</button>
+           
+       </form>
+   </div>
+</body>
+</html>
