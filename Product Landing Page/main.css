@@ -4,60 +4,76 @@
     padding: 0;
 }
 
-html,
-body {
+html, body {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-family: sans-serif;
     font-size: 16px;
     color: dimgray;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
     /* Styling Top Nav Bar and Logo */
 
-#navigation {
+header {
+    position: fixed;
     display: flex;
-    position: sticky;
-    padding: 25px;
     justify-content: space-between;
     align-items: center;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 100%;
     box-shadow: 1px -1px 5px darkgray;
+    background-color: whitesmoke;
+    z-index: 1000;
 }
 
-#logo {
+#navigation {
+    width: 20%;
     display: flex;
-    align-self: center;
-    vertical-align: middle;
-    margin-left: 50px;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-#navigation ul {
-    list-style-type: none;
+#main {
+    width: 100%;
     display: flex;
-    width: 40%;
-    margin-right:
-    align-self: center;
-    justify-content: space-around;
+    flex-flow: column; 
 }
 
     /* Styling Header */
 
-#header {
-    display: block;
-    margin-top: 100px;
-    text-align: center;
+.title {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
 }
 
 h1 {
     font-weight: 100;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    color: dimgray;
 }
 
-#email-input {
+#form {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email{
     margin-top: 50px;
-    width: 18%;
+    width: 35%;
     height: 35px;
     border: 1px solid lightgray;
     border-radius: 5px;
@@ -68,28 +84,28 @@ input[type=email] {
     opacity: 0.8;
 }
 
-.get-start {
+#submit {
+    width: 25%;
+    height: 30px;
     display: block;
     margin-top: 30px;
 }
 
-#get-start-button {
-    width: 12%;
-    height: 30px;
-}
-
     /* Main content */
 
-.main {
-    display: block;
+.features {
+    display: flex;
+    width: 100%;
     margin-top: 100px;
+    flex-direction: column;
+    justify-content: space-around;
     text-align: center;
 }
 
 .row-tab {
     margin: 50px auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 80%;
     
@@ -102,14 +118,17 @@ input[type=email] {
 
 .info {
     display: inline-block;
-    width: 50%;
+    width: 60%;
     text-align: left;
     margin-left: 25px;
-    color: dimgray;
+}
+
+.info p {
+    padding: 10px 0;
 }
 
 .video-block {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -122,16 +141,16 @@ input[type=email] {
     /* Styling Price blocks */
 
 .price-list {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 120px;
     display: flex;
     flex-flow: row;
     justify-content: center;
 }
 
 .price-list-blocks {
-    width: 300px;
+    width: 33%;
     margin: 0 30px;
     display: flex;
     flex-flow: column;
@@ -145,7 +164,7 @@ input[type=email] {
     font-weight: 700;
     text-transform: uppercase;
     padding: 15px 0;
-    background-color: darkorange;
+    background-color: yellowgreen;
 }
 
 .price-list-blocks h3 {
@@ -174,7 +193,7 @@ input[type=email] {
 button {
     border: none;
     border-radius: 5px;
-    background-color: darkorange;
+    background-color: yellowgreen;
     text-transform: uppercase;
     color: white;
     opacity: 0.5;
@@ -190,14 +209,12 @@ button:hover {
     /* Last part - Footer */
 
 footer {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
     position: absolute;
     margin: 0 auto;
-    width: 100%;
-    height: 80px;
-    margin-top: 100px;
-    box-shadow: 1px -1px 5px darkgray;
+    bottom: -250px;
+    left: 0;
+    height: 4rem;
 }
 
 .flinks {
@@ -209,13 +226,18 @@ footer {
 
 .flinks a {
     display: block;
-    margin: 0 50px;
+    margin: 0 10px;
 }
 
 #copyright {
     display: block;
     text-align: center;
+    margin: 25px 0;
+    color: darkgray;
 }
+
+
+    /* All Links Style */
 
 a {
     display: inline-block;
@@ -225,13 +247,49 @@ a {
 }
 
 a:link {
-  color: lightslategray;
+    color: dimgray;
 }
 
 a:visited {
-  color: lightslategray;
+    color: dimgray;
 }
 
 a:hover {
-    color: darkorange;
+    color: yellowgreen;
+}
+
+
+@media (max-width: 1160px) {
+    header {
+        display: flex;
+        flex-flow: column;
+    }
+    
+    #logo {
+        margin: 15px 0;
+    }
+    
+    #navigation {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    #pricing {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+    
+    .price-list-blocks {
+        width: 80%;
+        margin: 25px 0;
+    }
+    
+    h1 {
+        text-align: center;
+    }
 }
